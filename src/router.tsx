@@ -21,4 +21,4 @@ export const router = createBrowserRouter([
   { path: "/analytics", element: withLayout(<AnalyticsPage />) },
   { path: "/wiring", element: withLayout(<WiringListPage />) },
   { path: "/wiring/:id", element: withLayout(<WiringDetailPage />) },
-]);
+], { basename: import.meta.env.BASE_URL });
