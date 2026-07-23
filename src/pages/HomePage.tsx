@@ -3,6 +3,7 @@ import { useProgress } from "../context/ProgressContext";
 import { ALL_QUESTIONS, ALL_WIRING_DIAGRAMS } from "../data";
 import { getOverallStats, getMissedQuestions } from "../lib/stats";
 import { StatCard } from "../components/dashboard/StatCard";
+import { ExamCountdownCard } from "../components/dashboard/ExamCountdownCard";
 import { Button } from "../components/common/Button";
 
 export function HomePage() {
@@ -18,6 +19,8 @@ export function HomePage() {
           筆記試験の問題演習と、技能試験の複線図練習で合格を目指しましょう。
         </p>
       </div>
+
+      <ExamCountdownCard />
 
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
         <StatCard label="総解答数" value={`${overall.totalAnswered}問`} />
