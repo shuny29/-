@@ -1,0 +1,100 @@
+[
+  {
+    "id": "w-symbol-001",
+    "examPart": "written",
+    "category": "配線図記号",
+    "difficulty": 1,
+    "question": "配線図記号において、配線用遮断器（ブレーカ）を表す略号として正しいものはどれか。",
+    "choices": ["B", "S", "E", "T"],
+    "correctIndex": 0,
+    "explanation": "配線用遮断器は「B」（Breaker）で表される。Sは開閉器、Eは接地、Tはタイムスイッチを表す。",
+    "tags": ["略号"]
+  },
+  {
+    "id": "w-symbol-002",
+    "examPart": "written",
+    "category": "配線図記号",
+    "difficulty": 2,
+    "question": "配線図記号の略号「ELB」が表す機器はどれか。",
+    "choices": ["漏電遮断器", "配線用遮断器", "電磁開閉器", "タイムスイッチ"],
+    "correctIndex": 0,
+    "explanation": "ELB（Earth Leakage Breaker）は漏電遮断器を表す略号である。",
+    "tags": ["略号"]
+  },
+  {
+    "id": "w-symbol-003",
+    "examPart": "written",
+    "category": "配線図記号",
+    "difficulty": 2,
+    "question": "天井に取り付ける引掛シーリングを表す略号として正しいものはどれか。",
+    "choices": ["LK", "WP", "H", "T"],
+    "correctIndex": 0,
+    "explanation": "引掛シーリングは「LK」で表される。WPは防雨形、Hは位置表示灯内蔵を表す付記記号である。",
+    "tags": ["略号"]
+  },
+  {
+    "id": "w-symbol-004",
+    "examPart": "written",
+    "category": "配線図記号",
+    "difficulty": 2,
+    "question": "屋外など雨のかかる場所に施設する器具に付記される「WP」の意味として正しいものはどれか。",
+    "choices": ["防雨形", "防爆形", "壁付形", "防水形コンセント専用"],
+    "correctIndex": 0,
+    "explanation": "WP（Water Proof）は防雨形であることを示す付記記号である。",
+    "tags": ["付記記号"]
+  },
+  {
+    "id": "w-symbol-005",
+    "examPart": "written",
+    "category": "配線図記号",
+    "difficulty": 2,
+    "question": "点滅器（スイッチ）の図記号に付記される「3」の数字が意味するものはどれか。",
+    "choices": ["3路スイッチ", "3個口コンセント", "定格電流3A", "3心ケーブル"],
+    "correctIndex": 0,
+    "explanation": "点滅器記号に付記される数字「3」は3路スイッチであることを示し、2箇所から点滅操作ができる回路に用いる。",
+    "tags": ["点滅器"]
+  },
+  {
+    "id": "w-symbol-006",
+    "examPart": "written",
+    "category": "配線図記号",
+    "difficulty": 1,
+    "question": "接地（アース）を表す図記号の説明として最も適切なものはどれか。",
+    "choices": [
+      "電気機器の金属製外箱等を大地に接続するための記号",
+      "電源を遮断するための記号",
+      "電線を分岐するための記号",
+      "照明器具を点灯させるための記号"
+    ],
+    "correctIndex": 0,
+    "explanation": "接地記号は、感電や漏電による事故防止のため機器の金属部分を大地と電気的に接続することを表す。",
+    "tags": ["接地"]
+  },
+  {
+    "id": "w-symbol-007",
+    "examPart": "written",
+    "category": "配線図記号",
+    "difficulty": 1,
+    "question": "分電盤を表す配線図記号の一般的な形状はどれか。",
+    "choices": [
+      "長方形の中に斜線を入れた記号",
+      "円形の中に十字を入れた記号",
+      "三角形の記号",
+      "波線の記号"
+    ],
+    "correctIndex": 0,
+    "explanation": "分電盤は長方形の中に斜線を入れた記号で表される。",
+    "tags": ["分電盤"]
+  },
+  {
+    "id": "w-symbol-008",
+    "examPart": "written",
+    "category": "配線図記号",
+    "difficulty": 2,
+    "question": "換気扇を表す配線図記号の略号として正しいものはどれか。",
+    "choices": ["◯の中にF", "◯の中にC", "◯の中にL", "◯の中にS"],
+    "correctIndex": 0,
+    "explanation": "換気扇（Fan）は円の中に「F」を記した記号で表される。",
+    "tags": ["換気扇"]
+  }
+]
