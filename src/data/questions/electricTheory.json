@@ -1,0 +1,90 @@
+[
+  {
+    "id": "w-theory-001",
+    "examPart": "written",
+    "category": "電気理論",
+    "difficulty": 1,
+    "question": "抵抗 20Ω に 100V の電圧を加えたとき、流れる電流はいくらか。",
+    "choices": ["2A", "5A", "20A", "2000A"],
+    "correctIndex": 1,
+    "explanation": "オームの法則 I = V / R より、I = 100 ÷ 20 = 5A となる。",
+    "tags": ["オームの法則"]
+  },
+  {
+    "id": "w-theory-002",
+    "examPart": "written",
+    "category": "電気理論",
+    "difficulty": 1,
+    "question": "100V の電圧で 5A の電流が流れる電熱器の消費電力はいくらか。",
+    "choices": ["20W", "105W", "500W", "2000W"],
+    "correctIndex": 2,
+    "explanation": "電力 P = V × I より、P = 100 × 5 = 500W となる。",
+    "tags": ["電力"]
+  },
+  {
+    "id": "w-theory-003",
+    "examPart": "written",
+    "category": "電気理論",
+    "difficulty": 2,
+    "question": "10Ω の抵抗と 20Ω の抵抗を直列に接続したときの合成抵抗はいくらか。",
+    "choices": ["6.7Ω", "10Ω", "20Ω", "30Ω"],
+    "correctIndex": 3,
+    "explanation": "直列接続の合成抵抗は各抵抗の和となるため、10 + 20 = 30Ω となる。",
+    "tags": ["合成抵抗", "直列"]
+  },
+  {
+    "id": "w-theory-004",
+    "examPart": "written",
+    "category": "電気理論",
+    "difficulty": 2,
+    "question": "10Ω の抵抗を2個並列に接続したときの合成抵抗はいくらか。",
+    "choices": ["2Ω", "5Ω", "10Ω", "20Ω"],
+    "correctIndex": 1,
+    "explanation": "同じ抵抗値を2個並列にした場合、合成抵抗は元の値の半分になるため、10 ÷ 2 = 5Ω となる。",
+    "tags": ["合成抵抗", "並列"]
+  },
+  {
+    "id": "w-theory-005",
+    "examPart": "written",
+    "category": "電気理論",
+    "difficulty": 2,
+    "question": "500W の電熱器を2時間使用したときの電力量はいくらか。",
+    "choices": ["250Wh", "500Wh", "1000Wh", "1500Wh"],
+    "correctIndex": 2,
+    "explanation": "電力量 = 電力 × 時間 より、500W × 2h = 1000Wh（1kWh）となる。",
+    "tags": ["電力量"]
+  },
+  {
+    "id": "w-theory-006",
+    "examPart": "written",
+    "category": "電気理論",
+    "difficulty": 1,
+    "question": "同じ材質・長さの電線において、断面積が大きくなるほど電気抵抗はどうなるか。",
+    "choices": ["大きくなる", "小さくなる", "変化しない", "無限大になる"],
+    "correctIndex": 1,
+    "explanation": "電線の抵抗は断面積に反比例するため、断面積が大きいほど抵抗は小さくなる。",
+    "tags": ["電線の抵抗"]
+  },
+  {
+    "id": "w-theory-007",
+    "examPart": "written",
+    "category": "電気理論",
+    "difficulty": 1,
+    "question": "一般に西日本地域（関西・四国・九州等）で使用されている商用交流の周波数はどれか。",
+    "choices": ["50Hz", "60Hz", "100Hz", "120Hz"],
+    "correctIndex": 1,
+    "explanation": "日本では地域により周波数が異なり、東日本は50Hz、西日本（富士川・糸魚川付近以西）は60Hzが使用されている。",
+    "tags": ["交流", "周波数"]
+  },
+  {
+    "id": "w-theory-008",
+    "examPart": "written",
+    "category": "電気理論",
+    "difficulty": 3,
+    "question": "単相3線式100/200V配線において、2本の電圧側電線（外線）間の電圧はいくらか。",
+    "choices": ["100V", "141V", "200V", "300V"],
+    "correctIndex": 2,
+    "explanation": "単相3線式では中性線を挟んで両側の電圧側電線間の電圧は200Vとなり、各電圧側電線と中性線間はそれぞれ100Vとなる。",
+    "tags": ["単相3線式"]
+  }
+]
