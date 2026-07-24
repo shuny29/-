@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { getQuestionById } from "../data";
 import { useProgress } from "../context/ProgressContext";
+import { shuffleChoices } from "../lib/shuffle";
 import { QuestionCard } from "../components/quiz/QuestionCard";
 import { QuizProgressBar } from "../components/quiz/QuizProgressBar";
 import { Button } from "../components/common/Button";
@@ -31,7 +32,19 @@ export function QuizPage() {
   const [correctCount, setCorrectCount] = useState(0);
   const [missedIds, setMissedIds] = useState<string[]>([]);
 
-  if (!state || questions.length === 0) {
+  const currentQuestion = questions[index];
+
+  const displayQuestion = useMemo(() => {
+    if (!currentQuestion) return null;
+    const shuffled = shuffleChoices(currentQuestion.choices, currentQuestion.correctIndex);
+    return {
+      ...currentQuestion,
+      choices: shuffled.choices as [string, string, string, string],
+      correctIndex: shuffled.correctIndex as 0 | 1 | 2 | 3,
+    };
+  }, [currentQuestion]);
+
+  if (!state || questions.length === 0 || !currentQuestion || !displayQuestion) {
     return (
       <div className="rounded-xl border border-slate-200 bg-white p-6 text-center">
         <p className="mb-4 text-slate-600">出題する問題が選択されていません。</p>
@@ -40,14 +53,13 @@ export function QuizPage() {
     );
   }
 
-  const currentQuestion = questions[index];
   const isLast = index === questions.length - 1;
 
   const handleSelect = (choiceIndex: number) => {
     if (answered) return;
     setSelectedIndex(choiceIndex);
     setAnswered(true);
-    const correct = choiceIndex === currentQuestion.correctIndex;
+    const correct = choiceIndex === displayQuestion.correctIndex;
     recordAnswer(currentQuestion.id, correct);
     if (correct) {
       setCorrectCount((c) => c + 1);
@@ -79,17 +91,21 @@ export function QuizPage() {
   };
 
   return (
-    <div>
+    <div className="pb-24">
       <QuizProgressBar current={index + 1} total={questions.length} />
       <QuestionCard
-        question={currentQuestion}
+        question={displayQuestion}
         selectedIndex={selectedIndex}
         answered={answered}
         onSelect={handleSelect}
       />
       {answered && (
-        <div className="mt-4 flex justify-end">
-          <Button onClick={handleNext}>{isLast ? "結果を見る" : "次の問題へ"}</Button>
+        <div className="fixed inset-x-0 bottom-0 border-t border-slate-200 bg-white/95 px-4 py-3 backdrop-blur">
+          <div className="mx-auto flex max-w-4xl justify-end">
+            <Button onClick={handleNext} className="w-full px-8 py-3 text-base sm:w-auto">
+              {isLast ? "結果を見る" : "次の問題へ"}
+            </Button>
+          </div>
         </div>
       )}
     </div>
