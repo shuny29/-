@@ -6,3 +6,11 @@ export function shuffle<T>(items: T[]): T[] {
   }
   return result;
 }
+
+export function shuffleChoices<T>(choices: T[], correctIndex: number): { choices: T[]; correctIndex: number } {
+  const order = shuffle(choices.map((_, i) => i));
+  return {
+    choices: order.map((i) => choices[i]),
+    correctIndex: order.indexOf(correctIndex),
+  };
+}
