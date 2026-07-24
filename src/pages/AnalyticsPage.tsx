@@ -1,15 +1,13 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useProgress } from "../context/ProgressContext";
 import { ALL_QUESTIONS } from "../data";
 import { getCategoryStats, getMissedQuestions, getOverallStats } from "../lib/stats";
 import { StatCard } from "../components/dashboard/StatCard";
 import { CategoryAccuracyChart } from "../components/dashboard/CategoryAccuracyChart";
-import { ReviewQueueList } from "../components/dashboard/ReviewQueueList";
 import { Button } from "../components/common/Button";
 
 export function AnalyticsPage() {
   const { progress } = useProgress();
-  const navigate = useNavigate();
 
   const overall = getOverallStats(progress);
   const categoryStats = getCategoryStats(progress, ALL_QUESTIONS);
@@ -33,24 +31,18 @@ export function AnalyticsPage() {
         <CategoryAccuracyChart stats={categoryStats} />
       </div>
 
-      <div className="rounded-xl border border-slate-200 bg-white p-5">
-        <div className="mb-4 flex items-center justify-between">
+      <div className="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-5">
+        <div>
           <h2 className="text-sm font-semibold text-slate-700">
             復習が必要な問題（{missedQuestions.length}問）
           </h2>
-          {missedQuestions.length > 0 && (
-            <Button
-              onClick={() =>
-                navigate("/quiz/play", {
-                  state: { questionIds: missedQuestions.map((q) => q.id), label: "苦手問題の復習" },
-                })
-              }
-            >
-              復習を開始
-            </Button>
-          )}
+          <p className="mt-1 text-sm text-slate-600">
+            間違えた問題は解説つきの「復習ノート」でいつでも見返せます。
+          </p>
         </div>
-        <ReviewQueueList questions={missedQuestions} />
+        <Link to="/review">
+          <Button>復習ノートを開く</Button>
+        </Link>
       </div>
     </div>
   );
