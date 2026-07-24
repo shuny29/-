@@ -4,6 +4,7 @@ const navItems = [
   { to: "/", label: "ホーム" },
   { to: "/quiz", label: "問題演習" },
   { to: "/analytics", label: "苦手分析" },
+  { to: "/review", label: "復習ノート" },
   { to: "/wiring", label: "複線図練習" },
 ];
 

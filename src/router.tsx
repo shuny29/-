@@ -6,6 +6,7 @@ import { CategorySelectPage } from "./pages/CategorySelectPage";
 import { QuizPage } from "./pages/QuizPage";
 import { ResultPage } from "./pages/ResultPage";
 import { AnalyticsPage } from "./pages/AnalyticsPage";
+import { ReviewNotebookPage } from "./pages/ReviewNotebookPage";
 import { WiringListPage } from "./pages/WiringListPage";
 import { WiringDetailPage } from "./pages/WiringDetailPage";
 
@@ -19,6 +20,7 @@ export const router = createBrowserRouter([
   { path: "/quiz/play", element: withLayout(<QuizPage />) },
   { path: "/quiz/result", element: withLayout(<ResultPage />) },
   { path: "/analytics", element: withLayout(<AnalyticsPage />) },
+  { path: "/review", element: withLayout(<ReviewNotebookPage />) },
   { path: "/wiring", element: withLayout(<WiringListPage />) },
   { path: "/wiring/:id", element: withLayout(<WiringDetailPage />) },
 ], { basename: import.meta.env.BASE_URL });
